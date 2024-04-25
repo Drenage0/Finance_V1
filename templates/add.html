@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Add
+{% endblock %}
+
+{% block main %}
+<h2>Your cash balance: <span class="cashbalance">{{ cash | usd }}</span> </h2>
+<form action="/add" method="post">
+    <div class="mb-3">
+        <input name="amount" type="text" placeholder="Amount" autocomplete="off">
+
+        <button class="btn btn-primary" type="submit">Add</button>
+    </div>
+
+</form>
+
+{% endblock %}

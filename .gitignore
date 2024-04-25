@@ -1,0 +1,8 @@
+__pycache__/
+flask_session/  
+
+info.txt
+output.txt
+
+finance.db
+helpers.sql

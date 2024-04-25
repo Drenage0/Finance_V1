@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+<h2>Operations history:</h2>
+<!-- <p>{{ rows }}</p> -->
+{% if stocks %}
+    <table class="table table-striped">
+        <tr>
+            <th>symbol</th>
+            <th>number_of_shares</th>
+            <th>type</th>
+            <th>price_one($)</th>
+            <th>price_total($)</th>
+            <th>timestamp_info</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            {% for element in stock.values() %}
+            <td>{{ element }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+<p>You don't have any history yet</p>
+{% endif %}
+{% endblock %}

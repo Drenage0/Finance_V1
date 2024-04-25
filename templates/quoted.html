@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quoted
+{% endblock %}
+
+{% block main %}
+<h2>Stock found, here is the price:</h2>
+{% if symbol %}
+<table class="table table-striped">
+    <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Price</th>
+    </tr>
+    <tr>
+        <td>{{ symbol }}</td>
+        <td>{{ price | usd }}</td>
+    </tr>
+</table>
+{% else %}
+<p>{{ symbol }}</p>
+{% endif %}
+
+
+
+
+
+</form>
+
+{% endblock %}

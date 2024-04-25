@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+<h2>Look up a stock&#39;s current price:</h2>
+<form action="/quote" method="post">
+    <div class="mb-3">
+        <input name="symbol" type="text" placeholder="Stock symbol:">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+
+</form>
+
+{% endblock %}
